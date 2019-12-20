@@ -57,7 +57,7 @@ Using the Naive Bayes approach, whichever sentiment has the greater conditional 
 **For Sentiment Analysis**
 1. Getting the HTML code of certain web pages
    - **ISSUE:** I was getting a URLError for most sites with a message of `[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:581)`. At first, I did not do anything about it because I thought it just meant that I was not allowed webscrape the site.
-   - **SOLUTION:** However, after looking into the error, I solved the issue by discovering the certifi library, a collections of certificates I can use to access webpages. After installing the library, all of the URLs I have tried worked. I also added an except block to create a certificate if there is not one already. [(Source for try-except code)](ttps://incognitjoe.github.io/adding-certs-to-requests.html
+   - **SOLUTION:** However, after looking into the error, I solved the issue by discovering the certifi library, a collections of certificates I can use to access webpages. After installing the library, all of the URLs I have tried worked. I also added an except block to create a certificate if there is not one already. [(Source for try-except code)](ttps://incognitjoe.github.io/adding-certs-to-requests.html)
 2. Parsing HTML Code
    - **ISSUE:** After using request, we are left with the HTML code, which in all its glory contains lines of identifiers (none of which is meaningful for this analysis).
    - **SOLUTION:** I scanned the HTML code and noticed a pattern: all of the article text was nested in paragraphs. However, I did not want to just loop through the string of content searching text nested between `<p>` and `</p>` because that way seemed error-prone and space inefficient. I would have to keep track of the text in between as I am looping and constantly add to it. Thus, I decided to use BeautifulSoup to quickly parse the text for only paragraphs.
@@ -67,6 +67,7 @@ Using the Naive Bayes approach, whichever sentiment has the greater conditional 
 
 ## Overall Technologies Used
 **For Predictive Analysis**
+
 **For Sentiment Analysis**
   - Pandas Library
   - PorterStemmer from nltk.stem (for stemming words)
@@ -75,6 +76,10 @@ Using the Naive Bayes approach, whichever sentiment has the greater conditional 
   - Requests Library (for getting webpage content)
   - certifi (for referencing the web page root certificate)
 (Amy) Except for Pandas and Regex, this was my first time using these libraries.
+
+### Sources
+  - ["Hand on Sentiment Analysis Dataset Python" blog post by Analyticsvidhya.com used for guidance on sentiment analysis](https://www.analyticsvidhya.com/blog/2018/07/hands-on-sentiment-analysis-dataset-python/)
+  - ["Adding custom CA certs to Requests with Certifi" blog post by Incognitjoe used to bypass the certification error with getting information from a URL](https://incognitjoe.github.io/adding-certs-to-requests.html)
 
 
 Readme written by Amy :)
