@@ -47,6 +47,7 @@ I had two data sources:
 **Keeping track of emotion of each word in the training dataset**
   - Looped through all of the words in each of the filtered tweets to determine the sentiment frequency of each word based on the overall sentiment of its corresponding tweet. Only the words that occur in the article would have its sentiment frequency counted to ensure that the probability of a word occuring is not 0.
   - Each word has both of its sentiments' frequencies nudged by 1 to prevent the probability of a word occuring being 0 for either of thes sentiments
+  
 **Calculating Naive Bayes**
   - Since it is unlikely for a tweet to contain all of the words in the article, we use the Naive Bayes assumption that occurence of each word in the article is independent of each other. Thus, each word would have its own conditional probability to calculate.
 ### Sentiment Analysis Conclusion
