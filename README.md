@@ -3,17 +3,17 @@ Authors: Abigail Han, Thanh Luong, Amy Nguyen, Saroop Samra
 
 This project was done for COGS 9: Introduction to Data Science and aims to answer a question revolving UCSD's enrollment rate: whether there was correlation betweeen media influence, as determined by positive/negative sentiment from news articles on UCSD and the school's US World News ranking, and the number of students enrolling every year.
 
-#### Table of Content
+### Table of Content
 
-### Project Proposal
+## Project Proposal
 The proposal outlines how we are carrying out our project, including the various methods we were intending to use for analysis, and acknowledges the project's ethical considerations.
 
-### Actual Project (The Jupyter Notebook)
+## Actual Project (The Jupyter Notebook)
 Carrying out the actual project was extra credit. Thus, we did not carry out all of the intended methods.
 
 The two types of analysis we carried out were:
-1. Predictive Analysis: Linear Regression (done by Saroop)
-2. Text Analysis: Sentiment Analysis (done by Amy)
+1. **Predictive Analysis:** Linear Regression (done by Saroop)
+2. **Text Analysis:** Sentiment Analysis (done by Amy)
 
 ## Sentiment Analysis
 ### Data Collection
@@ -23,9 +23,9 @@ I had two data sources:
    - Used as training data to determine which word is associated most with which sentiment
 2. Web page text
    - Each word in the text is used to determine the sentiment of the overall page
-   - Used **web-scraping** to get the text from the page
+   - Used * *web-scraping* * to get the text from the page
      - I extracted the HTML code from the URL using the **Request library**
-     - I used certifi to get the root certificates for the webpages and bypass vertification
+     - I used **certifi** to get the root certificates for the webpages and bypass vertification
      - **BeautifulSoup** was used to parse the HTML code and extract only the paragraphs (the article text) from the HTML code
 
 ### Data Wrangling
@@ -47,13 +47,14 @@ Using the Naive Bayes approach, whichever sentiment has the greater conditional 
 **For Predicitve Analysis**
 **For Sentiment Analysis**
 1. Getting the HTML code of certain web pages
-   - I was getting a URLError for most sites with a message of `[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:581)`. At first, I did not do anything about it because I thought it just meant that I was not allowed webscrape the site.
-   - However, after looking into the error, I solved the issue by discovering the certifi library, a collections of certificates I can use to access webpages. After installing the library, all of the URLs I have tried worked. I also added an except block to create a certificate if there is not one already. [(Source for try-except code)](ttps://incognitjoe.github.io/adding-certs-to-requests.html
+   - **ISSUE:** I was getting a URLError for most sites with a message of `[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:581)`. At first, I did not do anything about it because I thought it just meant that I was not allowed webscrape the site.
+   - **SOLUTION:** However, after looking into the error, I solved the issue by discovering the certifi library, a collections of certificates I can use to access webpages. After installing the library, all of the URLs I have tried worked. I also added an except block to create a certificate if there is not one already. [(Source for try-except code)](ttps://incognitjoe.github.io/adding-certs-to-requests.html
 2. Parsing HTML Code
-   - After using request, we are left with the HTML code, which in all its glory contains lines of identifiers (none of which is meaningful for this analysis).
-   - To solve this issue, I scanned the HTML code and noticed a pattern: all of the article text was nested in paragraphs. However, I did not want to just loop through the string of content searching text nested between `<p>` and `</p>` because that way seemed error-prone and space inefficient. I would have to keep track of the text in between as I am looping and constantly add to it. Thus, I decided to use BeautifulSoup to quickly parse the text for only paragraphs.
+   - **ISSUE:** After using request, we are left with the HTML code, which in all its glory contains lines of identifiers (none of which is meaningful for this analysis).
+   - **SOLUTION:** I scanned the HTML code and noticed a pattern: all of the article text was nested in paragraphs. However, I did not want to just loop through the string of content searching text nested between `<p>` and `</p>` because that way seemed error-prone and space inefficient. I would have to keep track of the text in between as I am looping and constantly add to it. Thus, I decided to use BeautifulSoup to quickly parse the text for only paragraphs.
 3. Conditional Probability of 0
-   - 
+   - **ISSUE:** Since some words only have either negative or positive frequencies, the opposing sentiment would have a probability of 0. This is problematic because it neglects the sentiment's relationship with other words.
+   - **SOLUTION:** I nudged both of sentiment frequencies for each word by 1 to prevent any probability from becoming 0
 
 ## Overall Technologies Used
 **For Predictive Analysis**
