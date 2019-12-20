@@ -4,6 +4,15 @@ Authors: Abigail Han, Thanh Luong, Amy Nguyen, Saroop Samra
 This project was done for COGS 9: Introduction to Data Science and aims to answer a question revolving UCSD's enrollment rate: whether there was correlation betweeen media influence, as determined by positive/negative sentiment from news articles on UCSD and the school's US World News ranking, and the number of students enrolling every year.
 
 ### Table of Content
+1. [Project Proposal](https://github.com/amuamushu/cogs9_final_project#project-proposal)
+2. [Actual Project (The Jupyter Notebook)](https://github.com/amuamushu/cogs9_final_project#actual-project-the-jupyter-notebook)
+3. [Sentiment Analysis](https://github.com/amuamushu/cogs9_final_project#sentiment-analysis)
+   - [Data Collection](https://github.com/amuamushu/cogs9_final_project#data-collection)
+   - [Data Wrangling](https://github.com/amuamushu/cogs9_final_project#data-wrangling)
+   - [Naive Bayes](https://github.com/amuamushu/cogs9_final_project#naive-bayes)
+   - [Sentiment Analysis Conclusion](https://github.com/amuamushu/cogs9_final_project#sentiment-analysis-conclusion)
+4. [Overall Issues and Our Solutions](https://github.com/amuamushu/cogs9_final_project#overall-issues--our-solutions)
+5. [Overall Technologies Used](https://github.com/amuamushu/cogs9_final_project#overall-technologies-used)
 
 ## Project Proposal
 The proposal outlines how we are carrying out our project, including the various methods we were intending to use for analysis, and acknowledges the project's ethical considerations.
