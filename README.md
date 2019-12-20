@@ -45,8 +45,8 @@ I had two data sources:
   
 ### Naive Bayes
 **Keeping track of emotion of each word in the training dataset**
-  - Looped through all of the words in each of the filtered tweets to determine the sentiment frequency of each word based on the overall sentiment of its corresponding tweet. Only the words that occur in the article would have its sentiment frequency counted to ensure that the probability of a word occuring is not 0.
-  - Each word has both of its sentiments' frequencies nudged by 1 to prevent the probability of a word occuring being 0 for either of thes sentiments
+  - Looped through all of the words in each of the filtered tweets to determine the sentiment frequency of each word based on the overall sentiment of its corresponding tweet. 
+    - Only the words that occur in the article would have its sentiment frequency counted to ensure that the probability of a word occuring is not 0.
   
 **Calculating Naive Bayes**
   - Since it is unlikely for a tweet to contain all of the words in the article, we use the Naive Bayes assumption that occurence of each word in the article is independent of each other. Thus, each word would have its own conditional probability to calculate.
@@ -64,7 +64,7 @@ Using the Naive Bayes approach, whichever sentiment has the greater conditional 
    - **SOLUTION:** I scanned the HTML code and noticed a pattern: all of the article text was nested in paragraphs. However, I did not want to just loop through the string of content searching text nested between `<p>` and `</p>` because that way seemed error-prone and space inefficient. I would have to keep track of the text in between as I am looping and constantly add to it. Thus, I decided to use BeautifulSoup to quickly parse the text for only paragraphs.
 3. Conditional Probability of 0
    - **ISSUE:** Since some words only have either negative or positive frequencies, the opposing sentiment would have a probability of 0. This is problematic because it neglects the sentiment's relationship with other words.
-   - **SOLUTION:** I nudged both of sentiment frequencies for each word by 1 to prevent any probability from becoming 0
+   - **SOLUTION:** I nudged both of the sentiments' frequencies for each word by 1 to prevent the probability of a word occuring from being 0 for either of the sentiments. 
 
 ## Overall Technologies Used
 **For Predictive Analysis**
