@@ -75,6 +75,7 @@ Using the Naive Bayes approach, whichever sentiment has the greater conditional 
   - BeautifulSoup (for parsing HTML code)
   - Requests Library (for getting webpage content)
   - certifi (for referencing the web page root certificate)
+  
 (Amy) Except for Pandas and Regex, this was my first time using these libraries.
 
 ### Sources
