@@ -3,6 +3,8 @@ Authors: Abigail Han, Thanh Luong, Amy Nguyen, Saroop Samra
 
 This project was done for COGS 9: Introduction to Data Science and aims to answer a question revolving UCSD's enrollment rate: whether there was correlation betweeen media influence, as determined by positive/negative sentiment from news articles on UCSD and the school's US World News ranking, and the number of students enrolling every year.
 
+**Due to time-constraints, we were unable to fully answer the question we presented. Instead, the final notebook we did for extra credit aims to showcase our understanding and application of Predictive and Text Analysis.**
+
 ### Table of Content
 1. [Project Proposal](https://github.com/amuamushu/cogs9_final_project#project-proposal)
 2. [Actual Project (The Jupyter Notebook)](https://github.com/amuamushu/cogs9_final_project#actual-project-the-jupyter-notebook)
@@ -80,8 +82,8 @@ Using the Naive Bayes approach, whichever sentiment has the greater conditional 
 (Amy) Except for Pandas and Regex, this was my first time using these libraries.
 
 ### Sources
-  - ["Hand on Sentiment Analysis Dataset Python" blog post by Analyticsvidhya.com used for guidance on sentiment analysis](https://www.analyticsvidhya.com/blog/2018/07/hands-on-sentiment-analysis-dataset-python/)
-  - ["Adding custom CA certs to Requests with Certifi" blog post by Incognitjoe used to bypass the certification error with getting information from a URL](https://incognitjoe.github.io/adding-certs-to-requests.html)
+  - ["Hand on Sentiment Analysis Dataset Python" blog post by Analyticsvidhya.com](https://www.analyticsvidhya.com/blog/2018/07/hands-on-sentiment-analysis-dataset-python/) used for guidance on sentiment analysis
+  - ["Adding custom CA certs to Requests with Certifi" blog post by Incognitjoe](https://incognitjoe.github.io/adding-certs-to-requests.html) used to bypass the certification error with getting information from a URL
 
 
 Readme written by Amy :)
