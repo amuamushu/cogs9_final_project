@@ -1,28 +1,29 @@
 # COGS 9 Final Project: Yearly UCSD Application Rate and League Table Linear Regression Model
-Authors: Abigail Han, Thanh Luong, Amy Nguyen, Saroop Samra
+Project Authors: Abigail Han, Thanh Luong, Amy Nguyen, Saroop Samra
+Readme written by Amy :)
 
 This project was done for COGS 9: Introduction to Data Science and aims to answer a question revolving UCSD's enrollment rate: whether there was correlation betweeen media influence, as determined by positive/negative sentiment from news articles on UCSD and the school's US World News ranking, and the number of students enrolling every year.
 
 **Due to time-constraints, we were unable to fully answer the question we presented. Instead, the final notebook we did for extra credit aims to showcase our understanding and application of Predictive and Text Analysis.**
 
 ### Table of Content
-1. [Project Proposal](https://github.com/amuamushu/cogs9_final_project#project-proposal)
-2. [Actual Project (The Jupyter Notebook)](https://github.com/amuamushu/cogs9_final_project#actual-project-the-jupyter-notebook)
-3. [Sentiment Analysis](https://github.com/amuamushu/cogs9_final_project#sentiment-analysis)
+1. [Project Overview](https://github.com/amuamushu/cogs9_final_project#project-overview)
+    - Project Proposal
+    - Actual Project (The Jupyter Notebook)
+2. [Sentiment Analysis](https://github.com/amuamushu/cogs9_final_project#sentiment-analysis)
    - [Data Collection](https://github.com/amuamushu/cogs9_final_project#data-collection)
    - [Data Wrangling](https://github.com/amuamushu/cogs9_final_project#data-wrangling)
    - [Naive Bayes](https://github.com/amuamushu/cogs9_final_project#naive-bayes)
    - [Sentiment Analysis Conclusion](https://github.com/amuamushu/cogs9_final_project#sentiment-analysis-conclusion)
-4. [Overall Issues and Our Solutions](https://github.com/amuamushu/cogs9_final_project#overall-issues--our-solutions)
-5. [Overall Technologies Used](https://github.com/amuamushu/cogs9_final_project#overall-technologies-used)
+3. [Overall Issues and Our Solutions](https://github.com/amuamushu/cogs9_final_project#overall-issues--our-solutions)
+4. [Overall Technologies Used](https://github.com/amuamushu/cogs9_final_project#overall-technologies-used)
 
-## Project Proposal
-The proposal outlines how we are carrying out our project, including the various methods we were intending to use for analysis, and acknowledges the project's ethical considerations.
+## Project Overview
+**Project Proposal** The proposal outlines how we are carrying out our project, including the various methods we were intending to use for analysis, and acknowledges the project's ethical considerations.
 
-## Actual Project (The Jupyter Notebook)
-Carrying out the actual project was extra credit. Thus, we did not carry out all of the intended methods.
+**Actual Project (The Jupyter Notebook)** Carrying out the actual project was extra credit. Thus, we did not carry out all of the intended methods.
 
-The two types of analysis we carried out were:
+*The two types of analysis we carried out were*:
 1. **Predictive Analysis:** Linear Regression (done by Saroop)
 2. **Text Analysis:** Sentiment Analysis (done by Amy)
 
@@ -34,7 +35,7 @@ I had two data sources:
    - Used as training data to determine which word is associated most with which sentiment
 2. Web page text
    - Each word in the text is used to determine the sentiment of the overall page
-   - Used * *web-scraping* * to get the text from the page
+   - Used *web-scraping* to get the text from the page
      - I extracted the HTML code from the URL using the **Request library**
      - I used **certifi** to get the root certificates for the webpages and bypass vertification
      - **BeautifulSoup** was used to parse the HTML code and extract only the paragraphs (the article text) from the HTML code
@@ -84,6 +85,3 @@ Using the Naive Bayes approach, whichever sentiment has the greater conditional 
 ### Sources
   - ["Hand on Sentiment Analysis Dataset Python" blog post by Analyticsvidhya.com](https://www.analyticsvidhya.com/blog/2018/07/hands-on-sentiment-analysis-dataset-python/) used for guidance on sentiment analysis
   - ["Adding custom CA certs to Requests with Certifi" blog post by Incognitjoe](https://incognitjoe.github.io/adding-certs-to-requests.html) used to bypass the certification error with getting information from a URL
-
-
-Readme written by Amy :)
